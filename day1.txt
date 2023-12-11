@@ -1,0 +1,7 @@
+Create a 2D array and create 1D array from the rows of the 2D array.
+Print week using switch case
+
+
+
+
+
