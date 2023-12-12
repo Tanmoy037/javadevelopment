@@ -84,43 +84,72 @@ public class day1 {
 
         // Print week using switch case
 
-        Scanner reader = new Scanner(System.in);
-        System.out.println("Enter the number");
-        int day = reader.nextInt();
-        reader.close();
+        // Scanner reader = new Scanner(System.in);
+        // System.out.println("Enter the number");
+        // int day = reader.nextInt();
+        // reader.close();
 
 
 
-        // int day = 5;
+        // // int day = 5;
 
-        switch (day){
-            case 1:
-                System.out.println("Today is Monday");
-                break;
+        // switch (day){
+        //     case 1:
+        //         System.out.println("Today is Monday");
+        //         break;
+        //     case 2:
+        //         System.out.println("Today is Tuesday");
+        //         break;
 
-            case 2:
-                System.out.println("Today is Tuesday");
-                break;
+        //     case 3:
+        //         System.out.println("Today is Wednesday");
+        //         break;
+        //     case 4:
+        //         System.out.println("Today is Thursday");
+        //         break;
+        //     case 5:
+        //         System.out.println("Today is Friday");
+        //         break;
+        //     case 6:
+        //         System.out.println("Today is Saturday");
+        //         break;
+        //     case 7:
+        //         System.out.println("Today is Sunday");
+        //         break;
+        //     default:
+        //         System.out.println("Number is out of range");
 
-            case 3:
-                System.out.println("Today is Wednesday");
-                break;
-            case 4:
-                System.out.println("Today is Thursday");
-                break;
-            case 5:
-                System.out.println("Today is Friday");
-                break;
-            case 6:
-                System.out.println("Today is Saturday");
-                break;
-            case 7:
-                System.out.println("Today is Sunday");
-                break;
-            default:
-                System.out.println("Number is out of range");
+        // }
 
+        // Create a 2D array and create 1D array from the rows of the 2D array.
+        int [] [] two_Darray = {{1,2,3},{4,5,6},{7,8,9}};
+        
+        // int var = 0;
+        // int new_var = 0;
+        int [] one_Darray = {};
+        // for (int [] arr: two_Darray){
+        //     int new_var = 0;
+        //     for(int ar: arr){
+        //         new_var = ar + new_var;
+        //     }
+        //     System.out.println(new_var);
+        // }
+
+        for (int i = 0; i<two_Darray.length; i++){
+            // int []arr = two_Darray[i];
+            for (int j = 0; j <two_Darray[i].length; j++){
+                System.out.print(two_Darray[i][j]+ " ");
+            }
+            System.out.println(" ");
         }
+
+
+
+
+
+
+
+        
 
 
 

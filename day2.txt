@@ -1,0 +1,5 @@
+https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/description/?envType=daily-question&envId=2023-12-12
+do while loop
+while loop
+Two_Darray using user input and also will take lenght form user, and create a new array using old Two_Darray sum.(Using while loop)
+pyramid star printing.
