@@ -1,6 +1,7 @@
 Two_Darray using user input and also will take lenght form user, and create a new array using old Two_Darray sum.(Using while loop)
 pyramid star printing.
 Create a calculator using class and object
+Check two array using a method where it will compare and return boolen value.
 
 Need to do
 // method overloading
