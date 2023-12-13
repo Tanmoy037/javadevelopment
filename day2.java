@@ -48,14 +48,19 @@ public class day2 {
 
 // class Solution {
 //     public int maxProduct(int[] nums) {
-//         int max_val = 0;
-//         for (int i = 0; i < nums.length; i++){
-//             for (int j= i + 1; j < nums.length; j++){
-//                 max_val = Math.max((nums[i] - 1)*(nums [j] -1) , max_val);
-//             }
-        
+//    int max_val = 0; int secondMax_val = 0;
+//     for (int i = 0; i < nums.length; i++){
+//         int temp = nums[i];
+//         if (max_val < temp){
+//             secondMax_val = max_val;
+//             max_val = temp;
 //         }
-//         return max_val;
+//         else if (temp > secondMax_val){
+//             secondMax_val = temp;
+//         }
+    
+//     }
+//     return (max_val - 1) * (secondMax_val -1);
 //     }
 // }
 

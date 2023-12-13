@@ -1,0 +1,10 @@
+Two_Darray using user input and also will take lenght form user, and create a new array using old Two_Darray sum.(Using while loop)
+pyramid star printing.
+Create a calculator using class and object
+
+Need to do
+// method overloading
+// encapsulation
+// inheritence
+// polymorphisom
+// abstraction 
