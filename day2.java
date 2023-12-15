@@ -1,7 +1,8 @@
 public class day2 {
 
     public static void main(String[] args) {
-        // int [] [] two_Darray = {{1,2,4,5},{5,6}};
+        // int [] [] two_Darray = {{1,2,4,5},
+                                // {5,6}};
         // int [] new_arr = new int[two_Darray.length];
         // int var = 0;
         // // int var_num = 0;
