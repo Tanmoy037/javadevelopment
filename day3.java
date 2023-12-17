@@ -5,7 +5,7 @@ public class day3 {
 
 
     // pyramid star printing
-    for (int i = 0; i < 5; i++){
+    for (int i = 0; i <= 5; i++){
         for (int j = 0; j < i; j++){
             System.out.print("*" + " ");
         }

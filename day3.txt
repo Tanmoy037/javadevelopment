@@ -4,7 +4,8 @@ Create a calculator using class and object
 Check two array using a method where it will compare and return boolen value.
 
 Need to do
-// method overloading
+// method overloading(input wise method will get invoked)
+// method overriding
 // encapsulation
 // inheritence
 // polymorphisom
