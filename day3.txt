@@ -10,3 +10,8 @@ Need to do
 // inheritence
 // polymorphisom
 // abstraction 
+// constructure
+// constructure overloading
+// static Block
+// complie time , run time
+// Dynamic dispach
