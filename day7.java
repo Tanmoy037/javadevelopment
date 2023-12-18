@@ -23,6 +23,5 @@ class Star_printer{
             System.out.println(str);
         }
         
-        
     }
 }

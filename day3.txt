@@ -5,13 +5,13 @@ Check two array using a method where it will compare and return boolen value.
 
 Need to do
 // method overloading(input wise method will get invoked)
-// method overriding
-// encapsulation
-// inheritence
-// polymorphisom
+// method overriding ✅
+// encapsulation ✅ (complie time polymorphisom is method overloading and run time polymorphisom is method overriding)
+// inheritence ✅
+// polymorphisom ✅
 // abstraction 
-// constructure
-// constructure overloading
+// constructure ✅
+// constructure overloading --
 // static Block
-// complie time , run time
+// complie time , run time ✅
 // Dynamic dispach
