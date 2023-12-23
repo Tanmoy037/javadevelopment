@@ -6,12 +6,12 @@ Check two array using a method where it will compare and return boolen value.
 Need to do
 // method overloading(input wise method will get invoked)
 // method overriding ✅
-// encapsulation ✅ (complie time polymorphisom is method overloading and run time polymorphisom is method overriding)
+// encapsulation ✅ 
 // inheritence ✅
-// polymorphisom ✅
+// polymorphisom ✅ (complie time polymorphisom is method overloading and run time polymorphisom is method overriding)
 // abstraction 
-// constructure ✅
-// constructure overloading --
+// constructor ✅ (we use it to predefine something in class)
+// constructor overloading --
 // static Block
 // complie time , run time ✅
 // Dynamic dispach
