@@ -1,3 +1,15 @@
+public class day8 {
+
+
+    public static void main(String a[]){
+        Computer lap = new Laptop();
+        Computer desk = new Desktop();
+
+        Developer tanmoy = new Developer();
+        tanmoy.devApp(lap);
+
+    }
+}
 abstract class Computer {
 
     public abstract void code();
@@ -21,17 +33,5 @@ class Developer{
     public void devApp(Computer lap)
     {
         lap.code();
-    }
-}
-public class day8 {
-
-
-    public static void main(String a[]){
-        Computer lap = new Laptop();
-        Computer desk = new Desktop();
-
-        Developer tanmoy = new Developer();
-        tanmoy.devApp(lap);
-
     }
 }
