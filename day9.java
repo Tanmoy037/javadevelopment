@@ -37,6 +37,7 @@ class B extends Thread{
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+
         }
     }
 }
