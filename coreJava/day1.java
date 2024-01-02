@@ -1,3 +1,4 @@
+package coreJava;
 import java.util.Scanner;
 public class day1 {
 
