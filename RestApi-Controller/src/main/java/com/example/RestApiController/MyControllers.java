@@ -1,8 +1,6 @@
 package com.example.RestApiController;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,9 +33,29 @@ public class MyControllers {
     }
     @GetMapping("/get_user")
     public User getUser(@RequestParam("id")int id){
-
+        return users.get(id);
     }
 
+    @PostMapping("/add_user")
+    public void addUser(@RequestParam("id")int id,@RequestParam("name")String name,@RequestParam("country")String country,@RequestParam("age")int age){
 
+
+        User user = new User(id, name, country, age);
+        users.put(id,user);
+    }
+    @PostMapping("add_user_body")
+    public void addUser(@RequestBody(required = true)User user){
+        users.put(user.getId(),user);
+    }
+    @PutMapping("modify_user")
+    public User modifyUser(@RequestBody()User user){
+
+        users.put(user.getId(),user);
+        return user;
+    }
+    @DeleteMapping("/delete_user")
+    public void deleteUser(@RequestParam("id")int id){
+        users.remove(id);
+    }
 
 }

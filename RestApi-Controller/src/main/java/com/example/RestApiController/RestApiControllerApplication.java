@@ -11,3 +11,6 @@ public class RestApiControllerApplication {
 	}
 
 }
+
+
+//http://localhost:8080/add_user?id=1&name='Tanmoy'&country='India'&age='24'
