@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "day11",
+            "request": "launch",
+            "mainClass": "coreJava.day11",
+            "projectName": "javadev_c38dd2dc"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-MyappApplication<myapp>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
