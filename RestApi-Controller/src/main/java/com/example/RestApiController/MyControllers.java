@@ -1,5 +1,6 @@
 package com.example.RestApiController;
 
+import jakarta.websocket.server.PathParam;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -54,7 +55,7 @@ public class MyControllers {
         return user;
     }
     @DeleteMapping("/delete_user")
-    public void deleteUser(@RequestParam("id")int id){
+    public void deleteUser(@PathParam("id")Integer id){
         users.remove(id);
     }
 
