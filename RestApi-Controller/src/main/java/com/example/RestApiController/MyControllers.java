@@ -55,7 +55,7 @@ public class MyControllers {
         return user;
     }
     @DeleteMapping("/delete_user")
-    public void deleteUser(@PathParam("id")Integer id){
+    public void deleteUser(@PathVariable("id")int id){
         users.remove(id);
     }
 
