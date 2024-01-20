@@ -18,6 +18,10 @@ class MyControllers {
         List<User>listOfUsers = new ArrayList<>();
 
         for(User user:users.values()){
+            listOfUsers.add(user);
+
+        }
+        return listOfUsers;
     }
 
 }
