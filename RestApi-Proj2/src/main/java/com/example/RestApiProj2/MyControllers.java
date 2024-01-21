@@ -1,5 +1,6 @@
 package com.example.RestApiProj2;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,26 +15,27 @@ import java.util.List;
 @RestController
 class MyControllers {
 
-    HashMap<Integer,User> users = new HashMap<>();
 
+    @Autowired
+    UserService userService;
 
     @GetMapping("/get_users")
     ResponseEntity<List<User>> getAllUsers(){
         List<User>listOfUsers = new ArrayList<>();
 
-        for(User user:users.values()){
-            listOfUsers.add(user);
-
-        }
-        return new ResponseEntity<>(listOfUsers, HttpStatus.OK);
+        return new ResponseEntity<>(userService.getAllUser(),HttpStatus.OK);
     }
 
     @PostMapping("/add_user_body")
     ResponseEntity<String> addUser(@RequestBody()User user){
+        try{
+            userService.addUser(user);
+            return new ResponseEntity<>("Success",HttpStatus.CREATED);
+        }catch (Exception e){
+            return new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);
+        }
 
-        users.put(user.getId(),user);
 
-        return new ResponseEntity<>("Success",HttpStatus.CREATED);
     }
 
 }
