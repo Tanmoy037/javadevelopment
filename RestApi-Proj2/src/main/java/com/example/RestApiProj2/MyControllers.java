@@ -1,5 +1,7 @@
 package com.example.RestApiProj2;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,23 +17,23 @@ class MyControllers {
     HashMap<Integer,User> users = new HashMap<>();
 
 
-    @GetMapping()
-    List<User> getAllUsers(){
+    @GetMapping("/get_users")
+    ResponseEntity<List<User>> getAllUsers(){
         List<User>listOfUsers = new ArrayList<>();
 
         for(User user:users.values()){
             listOfUsers.add(user);
 
         }
-        return listOfUsers;
+        return new ResponseEntity<>(listOfUsers, HttpStatus.OK);
     }
 
     @PostMapping("/add_user_body")
-    String addUser(@RequestBody()User user){
+    ResponseEntity<String> addUser(@RequestBody()User user){
 
         users.put(user.getId(),user);
 
-        return "Successfully Added";
+        return new ResponseEntity<>("Success",HttpStatus.CREATED);
     }
 
 }
