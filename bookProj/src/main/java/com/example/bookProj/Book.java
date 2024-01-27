@@ -6,7 +6,7 @@ public class Book {
 
     private String name;
 
-    private String Author;
+    private String author;
 
     public void setId(int id) {
         this.id = id;
@@ -17,7 +17,7 @@ public class Book {
     }
 
     public void setAuthor(String author) {
-        Author = author;
+        author = author;
     }
 
     public int getId() {
@@ -29,12 +29,12 @@ public class Book {
     }
 
     public String getAuthor() {
-        return Author;
+        return author;
     }
 
     public Book(int id, String name, String author) {
         this.id = id;
         this.name = name;
-        Author = author;
+        this.author = author;
     }
 }
