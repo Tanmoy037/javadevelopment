@@ -1,7 +1,7 @@
 package com.example.bookProj;
 
+import com.example.bookProj.model.Book;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,7 +11,7 @@ import java.util.List;
 @Component
 class BookRepository {
 
-    HashMap<Integer,Book> books = new HashMap<>();
+    HashMap<Integer, Book> books = new HashMap<>();
 
     List<Book> getAllBooksFromDatabase(){
 

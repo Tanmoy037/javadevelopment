@@ -1,5 +1,6 @@
 package com.example.bookProj;
 
+import com.example.bookProj.model.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
