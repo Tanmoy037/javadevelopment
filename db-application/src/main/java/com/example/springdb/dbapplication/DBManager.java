@@ -33,7 +33,7 @@ public class DBManager {
         st.execute(sql);
     }
     public void insertInfo(Student student) throws SQLException{
-        String sql = "insert into student_info(name,age) values("+student.getName()+","+student.getAge()+")";
+        String sql = "insert into student_info(name,age) values('student.getName()','+student.getAge()+')";
 
         Statement st = connection.createStatement();
         int rows = st.executeUpdate(sql);
