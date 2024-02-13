@@ -28,5 +28,18 @@ class BookRepository {
         books.put(book.getId(), book);
     }
 
+    void updateBook(Book book){
+        Book existingBook = books.get(book.getId());
+        if(existingBook != null) {
+
+            existingBook.setName(book.getName());
+            existingBook.setAuthor(book.getAuthor());
+
+            books.put(existingBook.getId(), existingBook);
+
+        }
+    }
+
+
 
 }

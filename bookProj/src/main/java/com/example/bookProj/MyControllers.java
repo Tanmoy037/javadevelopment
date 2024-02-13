@@ -5,10 +5,7 @@ import com.example.bookProj.model.BookApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -38,6 +35,20 @@ class MyControllers {
             BookApiResponse response = new BookApiResponse(201, true, "Book added successfully", List.of(book));
             return new ResponseEntity<>(response, HttpStatus.CREATED);
         } catch (Exception e) {
+            BookApiResponse errorResponse = new BookApiResponse(400, false, e.getMessage(), null);
+            return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
+
+        }
+    }
+
+    @PutMapping("/modifyBook")
+    public ResponseEntity<BookApiResponse> modifyBook(@RequestBody Book book) {
+        try {
+            bookService.updateBook(book);
+            BookApiResponse response = new BookApiResponse(200, true, "Book updated successfully", List.of(book));
+            return  new ResponseEntity<>(response, HttpStatus.OK);
+
+        } catch (Exception e){
             BookApiResponse errorResponse = new BookApiResponse(400, false, e.getMessage(), null);
             return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
 
