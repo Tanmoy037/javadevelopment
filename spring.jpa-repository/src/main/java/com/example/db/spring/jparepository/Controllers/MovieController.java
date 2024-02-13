@@ -27,7 +27,7 @@ public class MovieController {
     @PostMapping("/createMovie")
     public void createMovie(@RequestBody()Movie movie){
 
-        
+
     }
 
 
