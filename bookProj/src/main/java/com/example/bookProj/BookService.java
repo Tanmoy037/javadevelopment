@@ -26,4 +26,8 @@ public class BookService {
         bookRepository.updateBook(book);
     }
 
+    void deleteBook(Book book){
+        bookRepository.deleteBook(book);
+    }
+
 }

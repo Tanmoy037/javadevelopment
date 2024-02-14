@@ -55,6 +55,10 @@ class BookRepository {
         }
     }
 
+    void deleteBook(Book book) {
+        books.remove(book.getId());
+    }
+
 
 
 

@@ -58,6 +58,18 @@ class MyControllers {
             return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
 
         }
+
+    }
+    @DeleteMapping("/deleteBook")
+    public ResponseEntity<BookApiResponse> deleteBook(@RequestBody Book book) {
+        try {
+            bookService.deleteBook(book);
+            BookApiResponse response = new BookApiResponse(200, true, "Book deleted successfully", null);
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        }catch (Exception e){
+            BookApiResponse errorResponse = new BookApiResponse(400, false, e.getMessage(), null);
+            return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
+        }
     }
 
 }

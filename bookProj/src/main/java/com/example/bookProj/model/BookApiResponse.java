@@ -1,5 +1,7 @@
 package com.example.bookProj.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.List;
 
 public class BookApiResponse {
@@ -7,6 +9,7 @@ public class BookApiResponse {
     private int statusCode;
     private boolean success;
     private String message;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private List<Book> data;
 
     // Constructors, getters, and setters
