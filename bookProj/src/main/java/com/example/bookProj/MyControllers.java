@@ -2,6 +2,8 @@ package com.example.bookProj;
 
 import com.example.bookProj.model.Book;
 import com.example.bookProj.model.BookApiResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +13,7 @@ import java.util.List;
 
 @RestController
 class MyControllers {
+    private final Logger logger = LoggerFactory.getLogger(BookRepository.class);
 
     @Autowired
     BookService bookService;
@@ -30,6 +33,7 @@ class MyControllers {
 
     @PostMapping("/addBook")
     public ResponseEntity<BookApiResponse> addBook(@RequestBody Book book) {
+        logger.info("book", book);
         try {
             bookService.addBook(book);
             BookApiResponse response = new BookApiResponse(201, true, "Book added successfully", List.of(book));
@@ -42,7 +46,8 @@ class MyControllers {
     }
 
     @PutMapping("/modifyBook")
-    public ResponseEntity<BookApiResponse> modifyBook(@RequestBody Book book) {
+    public ResponseEntity<BookApiResponse> updateBook(@RequestBody Book book) {
+        logger.info("log", book);
         try {
             bookService.updateBook(book);
             BookApiResponse response = new BookApiResponse(200, true, "Book updated successfully", List.of(book));
