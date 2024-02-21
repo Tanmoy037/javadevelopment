@@ -18,16 +18,18 @@ public class MovieController {
     MovieServices movieServices;
 
     @GetMapping("/getMovies")
-    public <Movie> getAllMovies(){
+    private List<Movie> getAllMovies(){
 
-        movieServices.getAllMovies();
+        return movieServices.getAllMovies();
 
     }
+
+
 
     @PostMapping("/createMovie")
     public void createMovie(@RequestBody()Movie movie){
 
-
+        movieServices.createMovie(movie);
     }
 
 

@@ -1,10 +1,20 @@
 package com.example.db.spring.jparepository.Models;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="movie_db")
 public class Movie {
 
-    String name;
-    int time;
-    double rating;
+    @Id
+    private String name;
+
+    @Column(name = "duration_of_movie")
+    private int time;
+    private double rating;
 
     public void setName(String name) {
         this.name = name;
