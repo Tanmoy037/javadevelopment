@@ -3,10 +3,7 @@ package com.example.db.spring.jparepository.Controllers;
 import com.example.db.spring.jparepository.Models.Movie;
 import com.example.db.spring.jparepository.Service.MovieServices;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -31,7 +28,11 @@ public class MovieController {
 
         movieServices.createMovie(movie);
     }
+    @PutMapping("/updateMovies")
+    public void updateMovie(@RequestBody()Movie movie){
 
+        movieServices.updateMovie(movie);
+    }
 
 
 }
