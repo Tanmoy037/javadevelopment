@@ -34,5 +34,12 @@ public class MovieController {
         movieServices.updateMovie(movie);
     }
 
+    @DeleteMapping("/deleteMovie")
+    public void deleteMovieByName(@RequestBody()Movie movie){
+        movieServices.deleteMovieByName(movie);
+    }
+
+
+
 
 }

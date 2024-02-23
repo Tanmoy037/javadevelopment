@@ -14,26 +14,26 @@ public class MovieServices {
     @Autowired
     MovieRepository movieRepository;
 
-    public List<Movie> getAllMovies(){
+    public List<Movie> getAllMovies() {
         return movieRepository.findAll();
     }
 
-    public void createMovie(Movie movie){
+    public void createMovie(Movie movie) {
 
         movieRepository.save(movie);
 
     }
 
-    public void updateMovie(Movie movie){
+    public void updateMovie(Movie movie) {
         Movie existingMovie = movieRepository.findByName(movie.getName());
-
-        // Check if the existing movie is not null
         if (existingMovie != null) {
-            // Update the existing movie with the new values
             existingMovie.setTime(movie.getTime());
             existingMovie.setRating(movie.getRating());
-
-            // Save the changes into the persistence context
             movieRepository.save(existingMovie);
+        }
     }
+    public void deleteMovieByName(Movie movie){
+        movieRepository.deleteById(movie.getName());
+    }
+
 }
