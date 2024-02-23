@@ -24,19 +24,19 @@ public class MovieController {
 
 
     @PostMapping("/createMovie")
-    public void createMovie(@RequestBody()Movie movie){
-
+    public void createMovie(@RequestBody Movie movie){
         movieServices.createMovie(movie);
     }
     @PutMapping("/updateMovies")
-    public void updateMovie(@RequestBody()Movie movie){
+    public void updateMovie(@RequestBody Movie movie){
 
         movieServices.updateMovie(movie);
     }
 
     @DeleteMapping("/deleteMovie")
-    public void deleteMovieByName(@RequestBody()Movie movie){
+    public void deleteMovieByName(@RequestBody Movie movie){
         movieServices.deleteMovieByName(movie);
+
     }
 
 
