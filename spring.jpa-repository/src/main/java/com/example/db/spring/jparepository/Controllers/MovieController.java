@@ -27,7 +27,7 @@ public class MovieController {
     public void createMovie(@RequestBody Movie movie){
         movieServices.createMovie(movie);
     }
-    @PutMapping("/updateMovies")
+    @PutMapping("/updateMovie")
     public void updateMovie(@RequestBody Movie movie){
 
         movieServices.updateMovie(movie);

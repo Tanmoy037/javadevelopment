@@ -18,10 +18,12 @@ public class Movie {
 
     public void setName(String name) {
         this.name = name;
+
     }
 
     public void setTime(int time) {
         this.time = time;
+
     }
 
     public void setRating(double rating) {
